@@ -12,14 +12,11 @@ Retorne o resultado da string.
 
 
 def verbing(s):
-    result = None
-    if len(s) < 3:
-        result = s
-    elif s[-3:] == 'ing':
-        result = ''.join([s, 'ly'])
-    else:
-        result = ''.join([s, 'ing'])
-    return result
+    if s.endswith('ing'):
+        s = ''.join([s, 'ly'])
+    elif len(s) > 2:
+        s = ''.join([s, 'ing'])
+    return s
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
