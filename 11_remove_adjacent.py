@@ -10,13 +10,10 @@ Irá retornar: [1, 2, 3]
 
 
 def remove_adjacent(nums):
-    list_wo_adj = []
-    for i in nums:
-        if list_wo_adj and (list_wo_adj[-1] == i):
-            pass
-        else:
-            list_wo_adj.append(i)
-    return list_wo_adj
+    try:
+        return [i for (i, j) in zip(nums, nums[1:] + [not nums[-1]]) if i != j]
+    except IndexError:
+        return []
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
