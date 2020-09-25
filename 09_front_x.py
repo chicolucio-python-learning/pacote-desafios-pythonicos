@@ -11,12 +11,13 @@ Dica: Isso pode ser resolvido criando 2 listas e ordenando cada uma
 antes de combina-las.
 """
 
+
 def front_x(words):
     # +++ SUA SOLUÇÃO +++
     return
 
 
-# --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+# --- Daqui para baixo são apenas códigos auxiliares de teste. ---
 
 def test(f, in_, expected):
     """

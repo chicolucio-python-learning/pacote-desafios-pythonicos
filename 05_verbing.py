@@ -10,12 +10,13 @@ Se o tamanho da string for menor que 3, não altere nada.
 Retorne o resultado da string.
 """
 
+
 def verbing(s):
     # +++ SUA SOLUÇÃO +++
     return
 
 
-# --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+# --- Daqui para baixo são apenas códigos auxiliares de teste. ---
 
 def test(f, in_, expected):
     """

@@ -2,17 +2,18 @@
 02. both_ends
 
 Dada uma string s, retorne uma string feita com os dois primeiros
-e os dois ultimos caracteres da string original.
+e os dois últimos caracteres da string original.
 Exemplo: 'spring' retorna 'spng'. Entretanto, se o tamanho da string
 for menor que 2, retorne uma string vazia.
 """
+
 
 def both_ends(s):
     # +++ SUA SOLUÇÃO +++
     return
 
 
-# --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+# --- Daqui para baixo são apenas códigos auxiliares de teste. ---
 
 def test(f, in_, expected):
     """

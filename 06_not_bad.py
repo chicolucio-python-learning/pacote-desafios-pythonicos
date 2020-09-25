@@ -9,12 +9,13 @@ por 'good' e retorne a string resultante.
 Exemplo: 'The dinner is not that bad!' retorna 'The dinner is good!'
 """
 
+
 def not_bad(s):
     # +++ SUA SOLUÇÃO +++
     return
 
 
-# --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+# --- Daqui para baixo são apenas códigos auxiliares de teste. ---
 
 def test(f, in_, expected):
     """

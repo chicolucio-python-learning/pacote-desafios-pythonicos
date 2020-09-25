@@ -12,12 +12,13 @@ Exemplo:
 Assuma que a e b tem tamanho 2 ou maior.
 """
 
+
 def mix_up(a, b):
     # +++ SUA SOLUÇÃO +++
     return
 
 
-# --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+# --- Daqui para baixo são apenas códigos auxiliares de teste. ---
 
 def test(f, in_, expected):
     """

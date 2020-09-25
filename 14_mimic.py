@@ -29,7 +29,7 @@ Além disso precisamos considerar que:
 * a chave '' contém uma lista com a primeira palavra do arquivo
 * a última palavra do arquivo contém uma lista com a palavra ''.
 
-Com o dicionario imitador é bastante simples emitir aleatoriamente texto
+Com o dicionário imitador é bastante simples emitir aleatoriamente texto
 que imita o original. Imprima uma palavra, depois veja quais palavras podem
 vir a seguir e pegue uma aleatoriamente como a proxima palavra do texto.
 
@@ -44,27 +44,27 @@ import sys
 
 
 def mimic_dict(filename):
-  """Retorna o dicionario imitador mapeando cada palavra para a lista de
-  palavras subsequentes."""
+    """Retorna o dicionário imitador mapeando cada palavra para a lista de
+    palavras subsequentes."""
     # +++ SUA SOLUÇÃO +++
-  return
+    return
 
 
 def print_mimic(mimic_dict, word):
-  """Dado o dicionario imitador e a palavra inicial, imprime texto de 200 palavras."""
+    """Dado o dicionário imitador e a palavra inicial, imprime texto de 200 palavras."""
     # +++ SUA SOLUÇÃO +++
-  return
+    return
 
 
 # Chama mimic_dict() e print_mimic()
 def main():
-  if len(sys.argv) != 2:
-    print('Utilização: ./14_mimic.py file-to-read')
-    sys.exit(1)
+    if len(sys.argv) != 2:
+        print('Utilização: ./14_mimic.py file-to-read')
+        sys.exit(1)
 
-  dict = mimic_dict(sys.argv[1])
-  print_mimic(dict, '')
+    dict = mimic_dict(sys.argv[1])
+    print_mimic(dict, '')
 
 
 if __name__ == '__main__':
-  main()
+    main()

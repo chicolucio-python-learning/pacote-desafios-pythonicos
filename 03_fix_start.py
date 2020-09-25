@@ -2,7 +2,7 @@
 03. fix_start
 
 Dada uma string s, retorne uma string onde
-todas as ocorrências do primeiro caracter de s
+todas as ocorrências do primeiro caractere de s
 foram substituidas por '*', exceto a primeira.
 
 Exemplo: 'babble' retorna 'ba**le'
@@ -10,15 +10,16 @@ Exemplo: 'babble' retorna 'ba**le'
 Assuma que a string tem tamanho 1 ou maior.
 
 Dica: s.replace(stra, strb) retorna uma versão da string s
-onde todas as instancias de stra foram substituidas por strb.
+onde todas as instâncias de stra foram substituidas por strb.
 """
+
 
 def fix_start(s):
     # +++ SUA SOLUÇÃO +++
     return
 
 
-# --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+# --- Daqui para baixo são apenas códigos auxiliares de teste. ---
 
 def test(f, in_, expected):
     """
