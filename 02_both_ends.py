@@ -7,12 +7,18 @@ Exemplo: 'spring' retorna 'spng'. Entretanto, se o tamanho da string
 for menor que 2, retorne uma string vazia.
 """
 
-def both_ends(s):
-    # +++ SUA SOLUÇÃO +++
-    return
 
+def both_ends(s):
+    try:
+        return f"{''.join([s[:2], s[-2:]])}"
+    except IndexError:
+        return ''
+
+# Solução não funciona por isso:
+# https://stackoverflow.com/questions/9490058/why-does-substring-slicing-with-index-out-of-range-work
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+
 
 def test(f, in_, expected):
     """
