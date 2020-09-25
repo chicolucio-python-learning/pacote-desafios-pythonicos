@@ -9,12 +9,15 @@ por 'good' e retorne a string resultante.
 Exemplo: 'The dinner is not that bad!' retorna 'The dinner is good!'
 """
 
-def not_bad(s):
-    # +++ SUA SOLUÇÃO +++
-    return
 
+def not_bad(s):
+    if ('bad' not in s) or (s.index('bad') < s.index('not')):
+        return s
+    else:
+        return f"{s[:s.index('not')]}{'good'}{s[s.index('bad')+3:]}"
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
+
 
 def test(f, in_, expected):
     """
