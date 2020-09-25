@@ -10,7 +10,7 @@ PS: Python não possui o operador ++, porém += funciona.
 
 
 def match_ends(words):
-    return len([word for word in words if ((len(word) > 1)) and (word[0] == word[-1])])
+    return sum(1 for word in words if ((len(word) > 1)) and (word[0] == word[-1]))
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
