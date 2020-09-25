@@ -8,10 +8,20 @@ modificar as listas recebidas.
 A sua solução deve rodar em tempo linear, ou seja, deve fazer uma
 única passagem em cada uma das listas.
 """
+from itertools import zip_longest
+
 
 def linear_merge(list1, list2):
-    # +++ SUA SOLUÇÃO +++
-    return
+    result = []
+    for x, y in zip_longest(list1, list2, fillvalue=''):
+        if x < y:
+            result.append(x)
+            result.append(y)
+        else:
+            result.append(y)
+            result.append(x)
+    result.remove('')
+    return result
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
