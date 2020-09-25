@@ -9,10 +9,10 @@ for menor que 2, retorne uma string vazia.
 
 
 def both_ends(s):
-    try:
-        return f"{''.join([s[:2], s[-2:]])}"
-    except IndexError:
-        return ''
+    string = ''
+    if len(s) > 1:
+        string = f"{''.join([s[:2], s[-2:]])}"
+    return string
 
 # Solução não funciona por isso:
 # https://stackoverflow.com/questions/9490058/why-does-substring-slicing-with-index-out-of-range-work
