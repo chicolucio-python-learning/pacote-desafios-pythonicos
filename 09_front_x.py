@@ -13,16 +13,7 @@ antes de combina-las.
 
 
 def front_x(words):
-    x_words = []
-    another_words = []
-    for word in words:
-        if word[0] == 'x':
-            x_words.append(word)
-        else:
-            another_words.append(word)
-    x_words.sort()
-    another_words.sort()
-    return x_words + another_words
+    return sorted(words, key=(lambda word: (word[0] != 'x', word)))
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
