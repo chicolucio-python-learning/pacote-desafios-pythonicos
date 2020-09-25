@@ -27,9 +27,8 @@ def parts(string):
 
 
 def front_back(a, b):
-    a = parts(a)
-    b = parts(b)
-    return a.front + b.front + a.back + b.back
+    a, b = parts(a), parts(b)
+    return ''.join([a.front, b.front, a.back, b.back])
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
