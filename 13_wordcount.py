@@ -53,13 +53,37 @@ e conferindo cada etapa do seu progresso.
 
 import sys
 
-
 # +++ SUA SOLUÇÃO +++
 # Defina as funções print_words(filename) e print_top(filename).
+from collections import defaultdict
+
+
+def count_dict(filename):
+    with open(filename) as f:
+        words = f.read().lower().replace('\n', ' ').split()
+
+    word_count = defaultdict(int)
+    for word in words:
+        word_count[word] += 1
+    return word_count
+
+
+def print_words(filename):
+    d = count_dict(filename)
+    for key, value in sorted(d.items()):
+        print(f"{key} {value}")
+
+
+def print_top(filename, n=20):
+    d = count_dict(filename)
+    for key, value in sorted(list(d.items())[:n], key=lambda t: t[1], reverse=True):
+        print(f"{key} {value}")
 
 
 # A função abaixo chama print_words() ou print_top() de acordo com os
 # parêtros do programa.
+
+
 def main():
     if len(sys.argv) != 3:
         print('Utilização: ./13_wordcount.py {--count | --topcount} file')
