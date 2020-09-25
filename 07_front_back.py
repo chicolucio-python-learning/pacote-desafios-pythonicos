@@ -10,9 +10,26 @@ Exemplo: 'abcde', a metade da frente é 'abc' e a de trás é 'de'.
 Finalmente, dadas duas strings a e b, retorne uma string na forma:
 a-frente + b-frente + a-trás + b-trás
 """
+from math import ceil
+from collections import namedtuple
+
+
+def parts(string):
+    mid = ceil(len(string) // 2)
+    if len(string) % 2 == 0:
+        aux = 0
+    else:
+        aux = 1
+    front = string[:mid+aux]
+    back = string[mid+aux:]
+    Parts = namedtuple("parts", ['front', 'back'])
+    return Parts(front, back)
+
+
 def front_back(a, b):
-    # +++ SUA SOLUÇÃO +++
-    return
+    a = parts(a)
+    b = parts(b)
+    return a.front + b.front + a.back + b.back
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
