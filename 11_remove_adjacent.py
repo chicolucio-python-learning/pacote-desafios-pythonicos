@@ -10,10 +10,7 @@ Irá retornar: [1, 2, 3]
 
 
 def remove_adjacent(nums):
-    try:
-        return [i for (i, j) in zip(nums, nums[1:] + [not nums[-1]]) if i != j]
-    except IndexError:
-        return []
+    return [i for (i, j) in zip(nums, nums[1:] + [False]) if i != j]
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
