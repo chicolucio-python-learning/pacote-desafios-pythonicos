@@ -68,15 +68,37 @@ def count_dict(filename):
     return word_count
 
 
+def sort_dict(d, key=0, rev=False, n=None):
+    """Função que define a forma de ordenamento
+
+    Parameters
+    ----------
+    d : dict
+        Dicionário a ser ordenado
+    key : int, optional
+        Forma de ordenação. 0 pela key, 1 pelos valores, por padrão 0
+    rev : bool, optional
+        se ordem invertida ou não, por padrão False
+    n : int, optional
+        quantidade de resultados, por padrão None
+
+    Returns
+    -------
+    dict
+        Dicionário ordenado
+    """
+    return sorted(list(d.items())[:n], key=lambda t: t[key], reverse=rev)
+
+
 def print_words(filename):
-    d = count_dict(filename)
-    for key, value in sorted(d.items()):
+    d = sort_dict(count_dict(filename))
+    for key, value in d:
         print(f"{key} {value}")
 
 
 def print_top(filename, n=20):
-    d = count_dict(filename)
-    for key, value in sorted(list(d.items())[:n], key=lambda t: t[1], reverse=True):
+    d = sort_dict(count_dict(filename), key=1, rev=True, n=20)
+    for key, value in d:
         print(f"{key} {value}")
 
 
